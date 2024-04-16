@@ -363,7 +363,7 @@ Sub WriteLinuxScript(baseName)
         Else
             With objfs.CreateTextFile(filespec)
                 .WriteLine("#!/bin/sh")
-                .WriteLine("pyenv exec $(basename ""$0"") ""$@""")
+                .WriteLine("winpty pyenv.bat exec $(basename ""$0"") ""$@""")
                 .Close
             End With
         End If
