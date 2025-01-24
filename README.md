@@ -10,7 +10,6 @@ Contributors and Interested people can join us on @[Slack](https://join.slack.co
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub issues open](https://img.shields.io/github/issues/pyenv-win/pyenv-win.svg?)](https://github.com/pyenv-win/pyenv-win/issues)
 [![Downloads](https://pepy.tech/badge/pyenv-win)](https://pepy.tech/project/pyenv-win)
-[![Rate this package](https://badges.openbase.com/python/rating/pyenv-win.svg?token=hjylt9qszl1DzDMCXNqMQZ6ijtlNCYzG3dKZNF+hgk4=)](https://openbase.com/python/pyenv-win?utm_source=embedded&amp;utm_medium=badge&amp;utm_campaign=rate-badge)
 
 - [Introduction](#introduction)
 - [pyenv](#pyenv)
@@ -113,13 +112,20 @@ For Visual Studio Code or another IDE with a built in terminal, restart it and c
 
 ### Manually check the settings
 
+The environment variables to be set:
+
+```plaintext
+C:\Users\<replace with your actual username>\.pyenv\pyenv-win\bin
+C:\Users\<replace with your actual username>\.pyenv\pyenv-win\shims
+```
+
 Ensure all environment variables are properly set with high priority via the GUI:
 
 ```plaintext
 This PC
    → Properties
       → Advanced system settings
-         → Advanced → Environment Variables...
+         → Advanced → System Environment Variables...
             → PATH
 ```
 

@@ -149,12 +149,12 @@ It's a easy way to use PowerShell here
    ```
 
 If for some reason you cannot execute PowerShell command(likely on an organization managed device), type "environment variables for you account" in Windows search bar and open Environment Variables dialog.
-You will need create those 3 new variables in User Variables section(top half). Let's assume username is `my_pc`.
+You will need create those 3 new variables in System Variables section (bottom half). Let's assume username is `my_pc`.
 |Variable|Value|
 |---|---|
-|PYENV|C:\Users\my_pc\.pyenv\pyenv-win\
-|PYENV_HOME|C:\Users\my_pc\.pyenv\pyenv-win\
-|PYENV_ROOT|C:\Users\my_pc\.pyenv\pyenv-win\
+|PYENV|C:\Users\my_pc\\.pyenv\pyenv-win\
+|PYENV_HOME|C:\Users\my_pc\\.pyenv\pyenv-win\
+|PYENV_ROOT|C:\Users\my_pc\\.pyenv\pyenv-win\
 
 And add two more lines to user variable `Path`.
 ```
@@ -164,6 +164,17 @@ C:\Users\my_pc\.pyenv\pyenv-win\shims
 
 Installation is done. Hurray!
 Return to [README](../README.md#installation)
+
+## **Usage with Git BASH**
+
+From within Git BASH, run the following:
+
+```sh
+echo 'export PATH="$HOME/.pyenv/pyenv-win/shims:$PATH"' >> ~/.bash_profile
+echo 'export PATH="$HOME/.pyenv/pyenv-win/bin:$PATH"' >> ~/.bash_profile
+```
+
+Open a new terminal, and confirm `pyenv --version` works.
 
 ***
 
